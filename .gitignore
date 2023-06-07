@@ -1,0 +1,8 @@
+creds.tf
+myseckey
+myseckey.pub
+myhosts
+.terraform.lock.hcl
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
