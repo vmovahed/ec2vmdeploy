@@ -75,7 +75,7 @@ resource "aws_instance" "ec2-deploy" {
           volume_type = "gp2"
       }
      tags = {
-         Name ="WP-Server01"
+         Name ="Capstone-Server"
          Environment = "PROD"
          OS = "UBUNTU"
          Managed = "INFRA"
