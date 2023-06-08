@@ -101,10 +101,10 @@ resource "aws_instance" "ec2-deploy" {
     command = "echo ${self.public_ip} > myhosts"
   }
 
-#provisioner "local-exec" {
+  provisioner "local-exec" {
     #To execute the ansible playbook
- #   command = "ansible-playbook -i myhosts --user ${local.ssh_user} --private-key ${local.private_key_path} wordpress-deploy.yml"
- # }
+     command = "ansible-playbook -i myhosts --user ${local.ssh_user} --private-key ${local.private_key_path} deployjenkinsdocker.yaml"
+  }
 
 }
 output "ec2instance" {
