@@ -6,7 +6,7 @@
       become: true
       apt:
         update_cache: yes
-    - name: Task -2 Install Java using Ansible
+    - name: Task -2 Install Java 11 using Ansible
       become: yes
       apt:
         name: "{{ packages }}"
@@ -14,6 +14,15 @@
       vars:
         packages:
            - openjdk-11-jdk
+
+    - name: Task -3 Install Java 17 using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - openjdk-17-jdk
 
     - name: ensure the jenkins apt repository key is installed
       apt_key: url=https://pkg.jenkins.io/debian/jenkins.io-2023.key state=present
