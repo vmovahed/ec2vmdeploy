@@ -3,7 +3,7 @@ locals {
        vpc = "vpc-0a28a064bc6db2258"
        ssh_user = "ubuntu"
        ami = "ami-08c40ec9ead489470"
-       itype = "t2.micro"
+       itype = "t2.medium"
        subnet = "subnet-01c0f9f4c71cd82e8"
        publicip = true
        keyname = "capstone-proj-key-pair"
